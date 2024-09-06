@@ -8,7 +8,6 @@ import (
 
 	pb "github.com/ekkinox/bazel-demo/proto/calculator"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
 )
 
 type server struct {
@@ -25,9 +24,6 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	pb.RegisterCalculatorServiceServer(s, &server{})
-	reflection.Register(s)
-
 	err = s.Serve(lis)
 	if err != nil {
 		log.Fatalf("Failed to serve: %v", err)

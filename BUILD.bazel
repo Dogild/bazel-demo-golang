@@ -1,4 +1,10 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
+# gazelle:resolve proto google/rpc/status.proto @googleapis//google/rpc:status_proto
+# gazelle:resolve proto google/rpc/code.proto @googleapis//google/rpc:code_proto
+
+# gazelle:resolve proto go google/rpc/status.proto @org_golang_google_genproto_googleapis_rpc//status
+# gazelle:resolve proto go google/rpc/code.proto @org_golang_google_genproto_googleapis_rpc//code
+
 # gazelle:prefix github.com/ekkinox/bazel-demo
 gazelle(name = "gazelle")

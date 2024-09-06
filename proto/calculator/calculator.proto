@@ -4,8 +4,6 @@ package calculator;
 
 option go_package = "github.com/ekkinox/bazel-demo/proto/calculator";
 
-import "google/api/annotations.proto";
-
 enum Operator {
   OPERATOR_UNSPECIFIED = 0;
   OPERATOR_SUM = 1;
@@ -30,10 +28,5 @@ message OperationResponse {
 
 service CalculatorService {
   // Unary rpc
-  rpc Calculate(OperationRequest) returns (OperationResponse) {
-    option (google.api.http) = {
-      post: "/v1/calculate"
-      body: "*"
-    };
-  };
+  rpc Calculate(OperationRequest) returns (OperationResponse) {};
 }
