@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 
+	"github.com/ekkinox/bazel-demo/common"
 	pb "github.com/ekkinox/bazel-demo/proto/calculator"
 	"google.golang.org/grpc"
 )
@@ -32,4 +33,6 @@ func main() {
 	}
 
 	log.Printf("Result: %v", res.Result)
+
+	common.VulnerableFunction()
 }

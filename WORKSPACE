@@ -375,4 +375,25 @@ go_repository(
     version = "v0.0.0-20200804184101-5ec99f83aff1",
 )
 
+go_repository(
+    name = "com_github_antchfx_xmlquery",
+    importpath = "github.com/antchfx/xmlquery",
+    sum = "h1:YvWny6c+VzYrTBMw9aopGqO3BfTUW6MHRAnHW2kYoQ0=",
+    version = "v1.3.0",
+)
+
+go_repository(
+    name = "com_github_antchfx_xpath",
+    importpath = "github.com/antchfx/xpath",
+    sum = "h1:cJ0pOvEdN/WvYXxvRrzQH9x5QWKpzHacYO8qzCcDYAg=",
+    version = "v1.1.10",
+)
+
+go_repository(
+    name = "com_github_golang_groupcache",
+    importpath = "github.com/golang/groupcache",
+    sum = "h1:1r7pUrabqp18hOBcwBwiTsbnFeTZHV9eER/QT5JVZxY=",
+    version = "v0.0.0-20200121045136-8c9f03a8e57e",
+)
+
 gazelle_dependencies()

@@ -6,6 +6,7 @@ go_library(
     importpath = "github.com/ekkinox/bazel-demo/client",
     visibility = ["//visibility:private"],
     deps = [
+        "//common",
         "//proto/calculator",
         "@org_golang_google_grpc//:go_default_library",
     ],
