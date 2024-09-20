@@ -5,5 +5,5 @@ go_library(
     srcs = ["common.go"],
     importpath = "github.com/ekkinox/bazel-demo/common",
     visibility = ["//visibility:public"],
-    deps = ["@com_github_antchfx_xmlquery//:xmlquery"],
+    deps = ["//vendor/github.com/antchfx/xmlquery"],
 )

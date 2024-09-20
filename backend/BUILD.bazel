@@ -5,10 +5,7 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/ekkinox/bazel-demo/backend",
     visibility = ["//visibility:private"],
-    deps = [
-        "//proto/calculator",
-        "@org_golang_google_grpc//:go_default_library",
-    ],
+    deps = ["//vendor/google.golang.org/grpc"],
 )
 
 go_binary(

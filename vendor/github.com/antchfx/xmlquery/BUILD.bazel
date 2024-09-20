@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "xmlquery",
+    srcs = [
+        "cache.go",
+        "node.go",
+        "parse.go",
+        "query.go",
+    ],
+    importmap = "github.com/ekkinox/bazel-demo/vendor/github.com/antchfx/xmlquery",
+    importpath = "github.com/antchfx/xmlquery",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/github.com/antchfx/xpath",
+        "//vendor/github.com/golang/groupcache/lru",
+        "//vendor/golang.org/x/net/html/charset",
+    ],
+)
