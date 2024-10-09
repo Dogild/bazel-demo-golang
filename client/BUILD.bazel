@@ -1,18 +1,23 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
-go_library(
-    name = "client_lib",
+# go_library(
+#     name = "client_lib",
+#     srcs = ["main.go"],
+#     importpath = "github.com/ekkinox/bazel-demo/client",
+#     visibility = ["//visibility:private"],
+#     deps = [
+#         "//common",
+#         "//vendor/google.golang.org/grpc",
+#     ],
+# )
+
+go_binary(
+    name = "client",
     srcs = ["main.go"],
-    importpath = "github.com/ekkinox/bazel-demo/client",
-    visibility = ["//visibility:private"],
+    # embed = [":client_lib"],
+    visibility = ["//visibility:public"],
     deps = [
         "//common",
         "//vendor/google.golang.org/grpc",
     ],
-)
-
-go_binary(
-    name = "client",
-    embed = [":client_lib"],
-    visibility = ["//visibility:public"],
 )

@@ -53,6 +53,7 @@ go_rules_dependencies()
 
 go_register_toolchains(
     version = "1.23.1",
+    # experiments = ["boringcrypto"],
 )
 
 # Load everything regarding proto.
